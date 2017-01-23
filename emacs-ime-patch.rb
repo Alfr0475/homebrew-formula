@@ -1,5 +1,5 @@
-class Emacs < Formula
-  desc "GNU Emacs text editor"
+class EmacsImePatch < Formula
+  desc "GNU Emacs text editor in IME patch"
   homepage "https://www.gnu.org/software/emacs/"
   url "https://ftpmirror.gnu.org/emacs/emacs-25.1.tar.xz"
   mirror "https://ftp.gnu.org/gnu/emacs/emacs-25.1.tar.xz"
