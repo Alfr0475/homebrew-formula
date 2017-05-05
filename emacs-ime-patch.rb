@@ -5,7 +5,7 @@ class EmacsImePatch < Formula
   mirror "https://ftp.gnu.org/gnu/emacs/emacs-25.2.tar.xz"
   sha256 "59b55194c9979987c5e9f1a1a4ab5406714e80ffcfd415cc6b9222413bc073fa"
 
-  patch :p1 do
+  patch :p0 do
     url 'https://gist.githubusercontent.com/takaxp/3314a153f6d02d82ef1833638d338ecf/raw/156aaa50dc028ebb731521abaf423e751fd080de/emacs-25.2-inline.patch'
   end
 
