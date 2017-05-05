@@ -78,9 +78,10 @@ class EmacsImePatch < Formula
       args << "--without-ns"
     end
 
+    system "./autogen.sh"
     system "./configure", *args
-    system "make"
-    system "make", "install"
+    system "make", "bootstrap", "-j1"
+    system "make", "install", "-j1"
 
     if build.with? "cocoa"
       prefix.install "nextstep/Emacs.app"
