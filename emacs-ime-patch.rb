@@ -1,12 +1,12 @@
 class EmacsImePatch < Formula
   desc "GNU Emacs text editor in IME patch"
   homepage "https://www.gnu.org/software/emacs/"
-  url "https://ftpmirror.gnu.org/emacs/emacs-25.2.tar.xz"
-  mirror "https://ftp.gnu.org/gnu/emacs/emacs-25.2.tar.xz"
-  sha256 "59b55194c9979987c5e9f1a1a4ab5406714e80ffcfd415cc6b9222413bc073fa"
+  url "https://ftpmirror.gnu.org/emacs/emacs-25.1.tar.xz"
+  mirror "https://ftp.gnu.org/gnu/emacs/emacs-25.1.tar.xz"
+  sha256 "19f2798ee3bc26c95dca3303e7ab141e7ad65d6ea2b6945eeba4dbea7df48f33"
 
   patch :p1 do
-    url 'https://gist.githubusercontent.com/takaxp/3314a153f6d02d82ef1833638d338ecf/raw/156aaa50dc028ebb731521abaf423e751fd080de/emacs-25.2-inline.patch'
+    url 'https://gist.githubusercontent.com/takaxp/f30f54663c08e257b8846cc68b37f09f/raw/bbf307d220b23ce0ccec766c3ee23852e71c80df/emacs-25.1-inline.patch'
   end
 
   head do
