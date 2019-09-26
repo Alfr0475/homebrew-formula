@@ -26,6 +26,7 @@ class EmacsImePatch < Formula
     ENV.prepend_path "PATH", "/usr/local/bin"
 
     args = %W[
+      --disable-ns-self-contained
       --disable-dependency-tracking
       --disable-silent-rules
       --enable-locallisppath=#{HOMEBREW_PREFIX}/share/emacs/site-lisp
@@ -47,7 +48,7 @@ class EmacsImePatch < Formula
 
     system "./configure", *args
     system "make"
-    system "make", "install"
+    system "sudo", "make", "install"
   end
 
   plist_options :manual => "emacs"
