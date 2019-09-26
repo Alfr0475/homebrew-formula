@@ -48,7 +48,15 @@ class EmacsImePatch < Formula
 
     system "./configure", *args
     system "make"
-    system "sudo", "make", "install"
+    system "make", "install"
+
+    prefix.install "nextstep/Emacs.app"
+
+    (bin/"emacs").unlink # Kill the existing symlink
+    (bin/"emacs").write <<~EOS
+      #!/bin/bash
+      exec #{prefix}/Emacs.app/Contents/MacOS/Emacs "$@"
+    EOS
   end
 
   plist_options :manual => "emacs"
