@@ -20,6 +20,7 @@ class EmacsImePatch < Formula
 
   depends_on "pkg-config" => :build
   depends_on "gnutls"
+  depends_on "ctags"
 
   def install
     ENV.prepend_path "PATH", "/usr/local/bin"
@@ -47,11 +48,6 @@ class EmacsImePatch < Formula
     system "./configure", *args
     system "make"
     system "make", "install"
-
-    # Follow MacPorts and don't install ctags from Emacs. This allows Vim
-    # and Emacs and ctags to play together without violence.
-    (bin/"ctags").unlink
-    (man1/"ctags.1.gz").unlink
   end
 
   plist_options :manual => "emacs"
