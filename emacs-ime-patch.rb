@@ -34,7 +34,6 @@ class EmacsImePatch < Formula
       --without-dbus
       --with-modules
       --with-ns
-      --with-cocoa
       --with-imagemagick
     ]
 
