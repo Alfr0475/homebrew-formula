@@ -6,7 +6,8 @@ class EmacsImePatch < Formula
   sha256 "4d90e6751ad8967822c6e092db07466b9d383ef1653feb2f95c93e7de66d3485"
 
   patch :p1 do
-    url 'https://gist.githubusercontent.com/takaxp/5294b6c52782d0be0b25342be62e4a77/raw/9c9325288ff03a50ee26e4e32c8ca57c0dd81ace/emacs-25.2-inline-googleime.patch'
+    url "https://gist.githubusercontent.com/takaxp/5294b6c52782d0be0b25342be62e4a77/raw/9c9325288ff03a50ee26e4e32c8ca57c0dd81ace/emacs-25.2-inline-googleime.patch"
+    sha256 "72a33289b78aaec186c05442e7228554a5339ac3aa2a8ff93449384e9bfa1ebb"
   end
 
   bottle do
